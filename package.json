@@ -1,0 +1,21 @@
+{
+    "name": "cypress-cucumber",
+    "devDependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+        "@faker-js/faker": "^9.6.0",
+        "allure-commandline": "^2.33.0",
+        "allure-cypress": "^3.2.0",
+        "cypress": "^14.1.0",
+        "dotenv": "^16.4.7",
+        "rimraf": "^6.0.1"
+    },
+    "scripts": {
+        "cy:run": "cypress run --headless",                     
+        "cy:run:ci": "cypress run --headless", 
+        "allure:clear": "rm -rf allure-results/ allure-report", 
+        "allure:report": "allure generate allure-results --clean -o allure-report", 
+        "allure:open": "allure open allure-report",            
+        "test:ci": "npm run allure:clear && npm run cy:run:ci && npm run allure:report" 
+  }
+}
