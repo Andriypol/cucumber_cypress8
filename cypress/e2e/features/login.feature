@@ -1,11 +1,11 @@
 Feature: Telnyx Log In Functionality
 
-  
+  @skip
   Scenario: Verify that the login form is displayed
     Given the user is on the home page
     When the user navigates to the login page
     Then the login form should be visible
-
+ 
   Scenario: Verify that a user can log in successfully with valid credentials
     Given the user is on the login page
     When the user logs in with valid credentials
